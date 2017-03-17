@@ -1,0 +1,51 @@
+{
+  "name"   : "用户注册",
+  "summary": "客户端注册" ,
+  "author" : "小五" ,
+  "request": {
+    "url": "/user/register",
+    "method": "POST",
+    "datatype":"json"
+  },
+  "param"  :[
+    {
+      "field":"account" ,
+      "type" :"string",
+      "required":true,
+      "default":"",
+      "other":"",
+      "remark":"帐号"
+    },
+    {
+      "field":"passwd" ,
+      "type" :"string",
+      "required":true,
+      "default":"",
+      "other":"",
+      "remark":"密码"
+    }
+  ],
+  "callback":[
+    {
+      "field":"code",
+      "type":"int",
+      "remark":"状态码"
+    },
+    {
+      "field":"msg",
+      "type":"string",
+      "remark":"状态信息"
+    },
+    {
+      "field":"security",
+      "type":"string",
+      "remark":"加密形式"
+    },
+    {
+      "field":"data",
+      "type":"object",
+      "remark":"数据"
+    }
+
+  ]
+}
